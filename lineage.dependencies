@@ -1,7 +1,26 @@
 [
   {
-    "repository":  "android_device_motorola_msm8916-common",
+    "repository":  "LOS-MSM8916/device_motorola_msm8916-common",
     "target_path": "device/motorola/msm8916-common"
   }
+  {
+    "repository":  "LOS-MSM8916/vendor_motorola",
+    "target_path": "vendor/motorola"
+  }
+  {
+    "repository":  "LOS-MSM8916/kernel_motorola_msm8916",
+    "target_path": "kernel/motorola/msm8916"
+  }
+  {
+    "repository":  "LineageOS/android_device_qcom_common",
+    "target_path": "device/qcom/common"
+  }
+  {
+    "repository":  "LineageOS/android_external_sony_boringssl-compat",
+    "target_path": "external/sony/boringssl-compat"
+  }
+  {
+    "repository":  "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings"
+  }
 ]
-
