@@ -1,5 +1,8 @@
 # system.prop for merlin
 
+# Motorola
+ro.mot.build.customerid=retail
+
 # Audio
 persist.vendor.audio.fluence.mode=endfire
 persist.vendor.audio.fluence.voicecall=true

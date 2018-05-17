@@ -39,23 +39,8 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
-void property_override(char const prop[], char const value[])
-{
-    prop_info *pi;
-
-    pi = (prop_info*) __system_property_find(prop);
-    if (pi)
-        __system_property_update(pi, value, strlen(value));
-    else
-        __system_property_add(prop, strlen(prop), value, strlen(value));
-}
-
 void vendor_load_properties()
 {
-    char customerid[PROP_VALUE_MAX];
-    char description[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char fingerprint[PROP_VALUE_MAX];
 
     std::string platform = GetProperty("ro.board.platform","");
     if (platform != ANDROID_TARGET)
@@ -65,22 +50,7 @@ void vendor_load_properties()
     std::string sku = GetProperty("ro.boot.hardware.sku","");
 
     if (sku == "XT1556" || radio == "0x6") {
-	sprintf(device, "merlin");
-        sprintf(customerid, "retail");
         property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
         property_set("persist.radio.process_sups_ind", "1");
     }
-    else if (sku == "XT1557" || radio == "0x9") {
-	sprintf(device, "merlin");
-        sprintf(customerid, "retasia");
-    }
-
-    sprintf(description, "merlin_%s-user 6.0.1 MPD24.107-56 30 release-keys", customerid);
-    sprintf(fingerprint, "motorola/merlin_%s/merlin:6.0.1/MPD24.107-56/30:user/release-keys", customerid);
-
-    property_override("ro.product.device", device);
-    property_override("ro.build.product", device);
-    property_override("ro.build.description", description);
-    property_override("ro.build.fingerprint", fingerprint);
-    property_set("ro.mot.build.customerid", customerid);
 }

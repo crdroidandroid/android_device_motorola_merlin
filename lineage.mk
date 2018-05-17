@@ -27,3 +27,11 @@ PRODUCT_MODEL := MotoG3-TE
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := merlin
+
+# Build Fingerprint
+BUILD_FINGERPRINT := motorola/merlin_retail/merlin:6.0.1/MPD24.107-56/30:user/release-keys
+
+# BuildProp Values
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME="MotoG3-TE" \
+    PRIVATE_BUILD_DESC="merlin_retail-user 6.0.1 MPD24.107-56 30 release-keys"
