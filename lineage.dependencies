@@ -1,26 +1,32 @@
 [
   {
-    "repository":  "LOS-MSM8916/device_motorola_msm8916-common",
+    "remote":      "github",
+    "repository":  "crdroidandroid/android_device_motorola_msm8916-common",
     "target_path": "device/motorola/msm8916-common"
-  }
+    "branch":      "8.1"
+  },
   {
-    "repository":  "LOS-MSM8916/vendor_motorola",
-    "target_path": "vendor/motorola"
-  }
-  {
-    "repository":  "LOS-MSM8916/kernel_motorola_msm8916",
+    "remote":      "github",
+    "repository":  "crdroidandroid/android_kernel_motorola_msm8916",
     "target_path": "kernel/motorola/msm8916"
-  }
+    "branch":      "8.1"
+  },
   {
-    "repository":  "LineageOS/android_device_qcom_common",
-    "target_path": "device/qcom/common"
-  }
+    "remote":      "github",
+    "repository":  "crdroidandroid/proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "branch":      "8.1"
+  },
   {
-    "repository":  "LineageOS/android_external_sony_boringssl-compat",
-    "target_path": "external/sony/boringssl-compat"
-  }
-  {
+    "remote":      "github",
     "repository":  "LineageOS/android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings"
+    "target_path": "packages/resources/devicesettings",
+    "branch":      "lineage-15.1"
+  },
+  {
+    "remote":      "github",
+    "repository":  "LineageOS/android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "branch":      "lineage-15.1"
   }
 ]
